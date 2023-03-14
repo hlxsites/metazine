@@ -242,3 +242,11 @@ main .section[data-section-status='initialized'] {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+.header-wrapper {
+  margin-top: 32px;
+}
+
+.icon.icon-wehealth_logo, .icon.icon-search {
+  width: auto;
+}
