@@ -9,9 +9,11 @@ export default async function decorate(block) {
     const alt = block.querySelector('h3');
     const title = block.querySelector('h2');
     const img = document.createElement('img');
-    img.setAttribute('src',path)
-    img.setAttribute('alt',alt.textContent);
     block.textContent = '';
-    block.append(img);
-    block.append(title);
+    if (img) {
+        img.setAttribute('src',path)
+        if (alt) img.setAttribute('alt',alt.textContent);
+        block.append(img);
+    }
+    if (title) block.append(title);
 }
